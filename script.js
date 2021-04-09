@@ -24,12 +24,12 @@ let personalMovieDB = {
     privat: false
 };
 
+let i; //счетчик
 
-let lastMovieOne = prompt("Один из последних просмотренных фильмов?", '');
-let movieRankOne = prompt("На сколько оцените его?", '');
-let lastMovieTwo = prompt("Один из последних просмотренных фильмов?", '');
-let movieRankTwo = prompt("На сколько оцените его?", '');
-
-personalMovieDB.movies[lastMovieOne] = movieRankOne;
-personalMovieDB.movies[lastMovieTwo] = movieRankTwo;
-console.log(personalMovieDB);
+for(i = 0; i < 2; i++){
+    let lastMovie = prompt("Один из последних просмотренных фильмов?", '');
+    let movieRank = prompt("На сколько оцените его?", '');
+    personalMovieDB.movies[lastMovie] = movieRank;
+   
+}
+    console.log(personalMovieDB);
