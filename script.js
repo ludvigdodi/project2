@@ -25,9 +25,13 @@ let personalMovieDB = {
 };
 
 let i; //счетчик
+let lastMovie;
 
 for(i = 0; i < 2; i++){
-    let lastMovie = prompt("Один из последних просмотренных фильмов?", '');
+    do {
+        lastMovie = prompt("Один из последних просмотренных фильмов?", '');
+    } while (lastMovie.length < 1 || lastMovie.length > 50);
+
     let movieRank = prompt("На сколько оцените его?", '');
     personalMovieDB.movies[lastMovie] = movieRank;
    
