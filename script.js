@@ -43,18 +43,29 @@ let lastMovie;
 //     } while (lastMovie.length < 1 || lastMovie.length > 50);
 
 //     let movieRank = prompt("На сколько оцените его?", '');
-//     personalMovieDB.movies[lastMovie] = movieRank;
-   
+//     personalMovieDB.movies[lastMovie] = movieRank;   
 // }
    
-while (i < 2) {
+// while (i < 2) {
+//     do {
+//         lastMovie = prompt("Один из последних просмотренных фильмов?", '');
+//     } while (lastMovie.length < 1 || lastMovie.length > 50);
+
+//     let movieRank = prompt("На сколько оцените его?", '');
+//     personalMovieDB.movies[lastMovie] = movieRank;
+//     i++;
+// }
+
+do {
     do {
         lastMovie = prompt("Один из последних просмотренных фильмов?", '');
-    } while (lastMovie.length < 1 || lastMovie.length > 50);
+        } while (lastMovie.length < 1 || lastMovie.length > 50);
 
-    let movieRank = prompt("На сколько оцените его?", '');
-    personalMovieDB.movies[lastMovie] = movieRank;
-    i++;
-}
+        let movieRank = +prompt("На сколько оцените его?", '');
+        personalMovieDB.movies[lastMovie] = movieRank;
+        i++;
+} while (i < 2);
+
+
 
 console.log(personalMovieDB);
