@@ -24,6 +24,16 @@ let personalMovieDB = {
     privat: false
 };
 
+if (personalMovieDB.count < 10) {
+    alert('Просмотрено довольно мало фильмов');
+} else if(personalMovieDB.count == 10 && personalMovieDB.count < 30){
+    alert('Вы классический зритель');
+} else if (personalMovieDB.count > 30) {
+    alert('Вы киноман');
+} else{
+    alert('ERROR!!!!!!!');
+}
+
 let i; //счетчик
 let lastMovie;
 
